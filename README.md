@@ -44,75 +44,77 @@ The Power BI dashboard was designed for both high-level executive overviews and 
     * **Discontinuation:** Advised reviewing specific items where price increases might lead to unacceptable volume loss.
 
 ---
-## 🔵 Flujo de trabajo (SQL → Power BI)
+## 🔵 Workflow (SQL → Power BI)
 
-### 1. Carga de datos (SQL Server)
-- Importar archivos CSV a SQL Server  
-- Crear tablas (ej: Orders_2023, Orders_2024, Orders_2025)  
-- Verificar que los datos se cargaron correctamente  
-
----
-
-### 2. Validación y transformación (SQL)
-- Ejecutar queries para validar datos  
-- Unificar tablas con `UNION ALL`  
-- Crear métricas (ej: profit = revenue - cogs)  
-- Trabajar fechas:
-  - Año → `YEAR(OrderDate)`
-  - Semana → `DATEPART(ISO_WEEK, OrderDate)`
-- Relacionar tablas con `JOIN` (customers, products)  
-
-👉 Resultado: dataset limpio y estructurado  
+### 1. Data Loading (SQL Server)
+- Import CSV files into SQL Server  
+- Create tables (e.g., Orders_2023, Orders_2024, Orders_2025)  
+- Verify that data was loaded correctly  
 
 ---
 
-### 3. Conexión a Power BI
-- Abrir Power BI  
-- Seleccionar fuente: **SQL Server**  
-- Conectarse a la base de datos  
-- Usar **consulta personalizada (query)**  
+### 2. Validation and Transformation (SQL)
+- Run queries to validate data  
+- Combine tables using `UNION ALL`  
+- Create metrics (e.g., profit = revenue - cogs)  
+- Work with dates:
+  - Year → `YEAR(OrderDate)`
+  - Week → `DATEPART(ISO_WEEK, OrderDate)`
+- Join tables using `JOIN` (customers, products)  
 
-👉 Mejora performance y control  
-
----
-
-### 4. Modelado en Power BI
-- Validar tipos de datos  
-- Revisar relaciones  
-- Optimizar modelo  
+👉 Result: clean and structured dataset  
 
 ---
 
-### 5. Creación de dashboards
-- Visualizaciones:
-  - Ventas  
+### 3. Connect to Power BI
+- Open Power BI  
+- Select data source: **SQL Server**  
+- Connect to the database  
+- Use a **custom query**  
+
+👉 Improves performance and control  
+
+---
+
+### 4. Data Modeling in Power BI
+- Validate data types  
+- Review relationships  
+- Optimize the model  
+
+---
+
+### 5. Dashboard Creation
+- Visualizations:
+  - Sales  
   - Profit  
   - KPIs  
-  - Tendencias por tiempo  
-- Uso de filtros (slicers)  
+  - Time-based trends  
+- Use filters (slicers)  
 
 ---
 
-### 6. Creación de medidas (DAX)
+### 6. Measure Creation (DAX)
 - Total Revenue  
 - Total Profit  
 - Profit Margin  
-- KPIs comparativos  
+- Comparative KPIs  
 
-👉 Permite análisis dinámico  
-
----
-
-## 🎯 Resumen profesional
-
-Primero cargo los datos en SQL Server desde archivos CSV, luego los limpio, transformo y unifico usando SQL (CTE, joins y cálculos). Después conecto Power BI directamente a esa consulta para trabajar sobre un dataset optimizado. Finalmente, construyo el modelo, desarrollo dashboards y creo medidas en DAX para obtener insights de negocio.
+👉 Enables dynamic analysis  
 
 ---
 
-## 🔥 Tip clave
+## 🎯 Professional Summary
 
-👉 Siempre hacer la transformación en SQL en lugar de Power BI:
+First, I load data into SQL Server from CSV files. Then, I clean, transform, and unify it using SQL (CTEs, joins, and calculations). After that, I connect Power BI directly to this query to work with an optimized dataset. Finally, I build the data model, develop dashboards, and create DAX measures to generate business insights.
 
-- Mejor performance  
-- Más escalable  
-- Más profesional  
+---
+
+## 🔥 Key Tip
+
+👉 Always perform transformations in SQL instead of Power BI:
+
+- Better performance  
+- More scalable  
+- More professional
+
+  **Thanks to Gaelim Holland for the tutorial
